@@ -43,13 +43,13 @@ $ yarn inject-manifest
 ```
 
 ### Deploy
-Default deploy command for **GitHub Pages**. You can also use **Netlify**, and this automatically pointing to the static directory.
+Default deploy command for **GitHub Pages**. You can also use **Netlify**, and this automatically pointing to the **static** directory.
 
 ```
 $ yarn deploy
 ```
 
-Note: Create a new branch with the name gh-pages, then deploy static directory to the gh-pages branch.
+Note: Create a new branch with the name **gh-pages**, then deploy static directory to the gh-pages branch.
 
 ### Testing
 You can test netlify headers including security, cache, etc:
