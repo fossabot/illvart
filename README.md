@@ -55,7 +55,7 @@ Note: Create a new branch with the name gh-pages, then deploy static directory t
 You can test netlify headers including security, cache, etc:
 
 - [Security Headers](https://securityheaders.com/?q=https://illvart.pinkyui.com&followRedirects=on)
-- [webhint](https://webhint.io/scanner/7a2fa722-6fa4-43bf-b692-9400366979c6)
+- [webhint](https://webhint.io/scanner/5da82049-7ebd-4e21-b91b-ef07daf9cf6b)
 
 ### Note
 Version v1.0.0 has been released, [download here](https://github.com/illvart/illvart/releases). For the next version I will include **Gulp** for optimization of development and production. Soon!
