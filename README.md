@@ -1,6 +1,6 @@
 # [illvart](https://github.com/illvart/illvart)
 
-> No JavaScript, just CSS!
+> My personal website running on Node.js
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0392af17-3c20-4278-8139-7dbabd347d5c/deploy-status)](https://app.netlify.com/sites/illvart/deploys)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
