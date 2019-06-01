@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow:
+Allow: /
+
+Sitemap: https://illvart.pinkyui.com/sitemap.xml

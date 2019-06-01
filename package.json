@@ -1,0 +1,28 @@
+{
+  "name": "illvart",
+  "description": "Personal website running on Node.js.",
+  "version": "1.0.0",
+  "author": "MNF <illvart.email@gmail.com>",
+  "main": "n/a",
+  "license": "MIT",
+  "homepage": "https://github.com/illvart/illvart",
+  "repository": "git+https://github.com/illvart/illvart.git",
+  "keywords": [
+    "personal website",
+    "blog",
+    "material design",
+    "PWA",
+    "Workbox"
+  ],
+  "devDependencies": {
+    "babel-minify": "^0.5.0",
+    "gh-pages": "^2.0.1",
+    "http-server": "^0.11.1",
+    "workbox-cli": "^4.3.1"
+  },
+  "scripts": {
+    "dev": "http-server ./static/ -p 6661",
+    "deploy": "gh-pages -d ./static/",
+    "inject-manifest": "workbox injectManifest && minify --mangle.topLevel ./static/sw.js --outFile ./static/sw.js"
+  }
+}
