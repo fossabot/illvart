@@ -359,8 +359,23 @@ a:hover {
   padding: 0;
 }
 .modal-inner p {
-  font-size: 16px;
+  font-size: 15px;
   overflow: hidden;
+}
+.modal-inner h3 {
+  font-size: 20px;
+  margin: 12px 0;
+  text-transform: none;
+}
+.modal-inner h4 {
+  font-size: 18px;
+  margin: 9px 0;
+  text-transform: none;
+}
+.modal-inner h5 {
+  font-size: 16px;
+  margin: 6px 0;
+  text-transform: none;
 }
 .modal-close {
   position: absolute;
