@@ -9,7 +9,7 @@
 
 This is my first open source project. Basically, this doesn't use ~~JavaScript~~, only CSS! But support **Progressive Web Apps (PWA)** with [Workbox](https://github.com/GoogleChrome/workbox).
 
-![Screenshot](https://cdn.staticaly.com/screenshot/illvart.pinkyui.com?fullPage=true?v=1.0.0)
+![Screenshot](https://cdn.staticaly.com/screenshot/illvart.com?fullPage=true?v=1.0.0)
 
 ## Note
 This project work in progress. The next version I will include **Node.js** packages like a **Gulp** to optimize development and production. Soon! 🙇‍♂️
@@ -54,7 +54,7 @@ Note: Create a new branch with the name **gh-pages**, then deploy static directo
 ### Testing
 You can test netlify headers including security, cache, etc:
 
-- [Security Headers](https://securityheaders.com/?q=https://illvart.pinkyui.com&followRedirects=on)
+- [Security Headers](https://securityheaders.com/?q=https://illvart.com&followRedirects=on)
 - [webhint](https://webhint.io/scanner/85384f9c-9f07-4eab-93f5-6bb71660221c)
 
 ## License

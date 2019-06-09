@@ -2,4 +2,4 @@ User-Agent: *
 Disallow:
 Allow: /
 
-Sitemap: https://illvart.pinkyui.com/sitemap.xml
+Sitemap: https://illvart.com/sitemap.xml

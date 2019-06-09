@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain (SEO)
+https://illvart.netlify.com/* https://illvart.com/:splat 301!
