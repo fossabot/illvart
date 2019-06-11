@@ -1,7 +1,8 @@
 {
-  "name": "illvart",
+  "name": "Muhammad Nur Fuad",
   "short_name": "MNF",
-  "start_url": "/",
+  "start_url": "/?utm_source=homescreen",
+  "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#f2f2f2",
