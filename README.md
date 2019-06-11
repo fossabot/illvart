@@ -9,7 +9,7 @@
 
 This is my first open source project. Basically, this doesn't use ~~JavaScript~~, only CSS! But support **Progressive Web Apps (PWA)** with [Workbox](https://github.com/GoogleChrome/workbox).
 
-![Screenshot](https://cdn.staticaly.com/screenshot/illvart.com?fullPage=true?v=1.0.0)
+![Screenshot](https://cdn.staticaly.com/screenshot/illvart.com?fullPage=true?v=1.0.1)
 
 ## Note
 This project work in progress. The next version I will include **Node.js** packages like a **Gulp** to optimize development and production. Soon! 🙇‍♂️
