@@ -18,35 +18,35 @@ This project work in progress. The next version I will include **Node.js** packa
 Clone this repository and customization it:
 
 ```
-$ git clone https://github.com/illvart/illvart.git
+git clone https://github.com/illvart/illvart.git
 ```
 
 ### Install Packages
 Install the packages required:
 
 ```
-$ yarn install
+yarn install
 ```
 
 ### Development
 Running on localhost by using [http-server](https://github.com/indexzero/http-server):
 
 ```
-$ yarn dev
+yarn dev
 ```
 
 ### PWA
 After editing the code and adding something, then inject manifest:
 
 ```
-$ yarn inject-manifest
+yarn inject-manifest
 ```
 
 ### Deploy
 Default deploy command for **GitHub Pages**. You can also use **Netlify**, and this automatically pointing to the **static** directory.
 
 ```
-$ yarn deploy
+yarn deploy
 ```
 
 Note: Create a new branch with the name **gh-pages**, then deploy static directory to the gh-pages branch.
