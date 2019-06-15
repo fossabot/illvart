@@ -31,7 +31,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
   /\.(?:jpg|jpeg|png|gif|webp|ico|svg)$/,
   new workbox.strategies.CacheFirst({
-    cacheName: "illvart-images",
+    cacheName: "pwa-images",
     plugins: [
       new workbox.expiration.Plugin({
         maxEntries: 60,
@@ -44,7 +44,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
   /\.(?:js|mjs|css)$/,
   new workbox.strategies.StaleWhileRevalidate({
-    cacheName: "illvart-static"
+    cacheName: "pwa-static"
   })
 );
 // Force service worker to update immediately after installing

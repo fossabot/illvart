@@ -9,15 +9,18 @@
   "repository": "git+https://github.com/illvart/illvart.git",
   "keywords": [
     "personal website",
+    "static site",
     "blog",
     "material design",
     "PWA",
     "Workbox"
   ],
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
   "devDependencies": {
     "babel-minify": "^0.5.0",
     "gh-pages": "^2.0.1",
-    "http-server": "^0.11.1",
     "workbox-cli": "^4.3.1"
   },
   "scripts": {
