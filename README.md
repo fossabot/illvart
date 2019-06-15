@@ -5,7 +5,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0392af17-3c20-4278-8139-7dbabd347d5c/deploy-status)](https://app.netlify.com/sites/illvart/deploys)
 
 ## Note
-If you are interested using this template, please use [github.com/illvart/aboutme](https://github.com/illvart/aboutme).
+If you are interested in using this template, please use [github.com/illvart/aboutme](https://github.com/illvart/aboutme).
 
 ## License
-Except as otherwise noted, the content includes code of this site is licensed under the [MIT License](LICENSE), and code samples are licensed under the [CC-BY-3.0](https://creativecommons.org/licenses/by/3.0/).
+Except as otherwise noted, the content of this site is licensed under the [MIT License](LICENSE), and code samples are licensed under the [CC-BY-3.0](https://creativecommons.org/licenses/by/3.0/).
