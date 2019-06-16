@@ -184,6 +184,9 @@ a:hover {
 }
 
 /* Follow */
+.follow {
+  font-size: 0;
+}
 .follow a {
   display: inline-block;
   width: 34px;
