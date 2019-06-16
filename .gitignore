@@ -44,6 +44,9 @@ dist/
 # Reports linting
 .reports/
 
+# css build
+src/assets/css/build
+
 # Ignore doc
 doc/
 
