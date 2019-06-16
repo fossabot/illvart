@@ -28,14 +28,14 @@
     X-UA-Compatible = "IE=Edge"
 
 [[headers]]
-  for = "/assets/css/**/*.css"
+  for = "/assets/css/*.css"
   [headers.values]
     Content-Type = "text/css; charset=utf-8"
     Cache-Control = "max-age=31536000, immutable"
     Accept-Encoding = "gzip, deflate, br"
 
     [[headers]]
-      for = "/assets/css/**/*.min.css"
+      for = "/assets/css/*.min.css"
       [headers.values]
         Content-Type = "text/css; charset=utf-8"
         Cache-Control = "max-age=31536000, immutable"
@@ -63,37 +63,37 @@
     Accept-Encoding = "gzip, deflate, br"
 
 [[headers]]
-  for = "/assets/img/**/*.jpeg"
+  for = "/assets/img/*.jpeg"
   [headers.values]
     Cache-Control = "max-age=31536000, immutable"
 
 [[headers]]
-  for = "/assets/img/**/*.jpg"
+  for = "/assets/img/*.jpg"
   [headers.values]
     Cache-Control = "max-age=31536000, immutable"
 
 [[headers]]
-  for = "/assets/img/**/*.png"
+  for = "/assets/img/*.png"
   [headers.values]
     Cache-Control = "max-age=31536000, immutable"
 
 [[headers]]
-  for = "/assets/img/**/*.gif"
+  for = "/assets/img/*.gif"
   [headers.values]
     Cache-Control = "max-age=31536000, immutable"
 
 [[headers]]
-  for = "/assets/img/**/*.svg"
+  for = "/assets/img/*.svg"
   [headers.values]
     Cache-Control = "max-age=31536000, immutable"
 
 [[headers]]
-  for = "/assets/img/**/*.ico"
+  for = "/assets/img/*.ico"
   [headers.values]
     Cache-Control = "max-age=31536000, immutable"
 
 [[headers]]
-  for = "/assets/img/**/*.webp"
+  for = "/assets/img/*.webp"
   [headers.values]
     Cache-Control = "max-age=31536000, immutable"
 
@@ -105,13 +105,13 @@
     Accept-Encoding = "br"
 
 [[headers]]
-  for = "/assets/css/**/*.css.br"
+  for = "/assets/css/*.css.br"
   [headers.values]
     Content-Type = "text/css; .br"
     Accept-Encoding = "br"
 
     [[headers]]
-      for = "/assets/css/**/*.min.css.br"
+      for = "/assets/css/*.min.css.br"
       [headers.values]
         Content-Type = "text/css; .br"
         Accept-Encoding = "br"
