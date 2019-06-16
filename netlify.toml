@@ -32,32 +32,35 @@
   [headers.values]
     Content-Type = "text/css; charset=utf-8"
     Cache-Control = "immutable, max-age=31536000"
-    # Accept-Encoding = "gzip, deflate, br"
+    Accept-Encoding = "gzip, deflate, br"
 
     [[headers]]
       for = "/assets/css/**/*.min.css"
       [headers.values]
         Content-Type = "text/css; charset=utf-8"
         Cache-Control = "immutable, max-age=31536000"
+        Accept-Encoding = "gzip, deflate, br"
 
 [[headers]]
   for = "*.js"
   [headers.values]
     Content-Type = "text/javascript; charset=utf-8"
     Cache-Control = "immutable, max-age=31536000"
-    # Accept-Encoding = "gzip, deflate, br"
+    Accept-Encoding = "gzip, deflate, br"
 
     [[headers]]
       for = "*.min.js"
       [headers.values]
         Content-Type = "text/javascript; charset=utf-8"
         Cache-Control = "immutable, max-age=31536000"
+        Accept-Encoding = "gzip, deflate, br"
 
 [[headers]]
   for = "*.webmanifest"
   [headers.values]
     Content-Type = "application/manifest+json; charset=utf-8"
     Cache-Control = "immutable, max-age=31536000"
+    Accept-Encoding = "gzip, deflate, br"
 
 [[headers]]
   for = "/assets/img/**/*.jpeg"
