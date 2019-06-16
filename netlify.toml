@@ -1,6 +1,6 @@
 [build]
   publish = "dist"
-  command = "gulp default"
+  command = "yarn build" # or gulp default
 
 [[headers]]
   for = "/*"
