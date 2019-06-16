@@ -32,14 +32,14 @@
   [headers.values]
     Content-Type = "text/css; charset=utf-8"
     Cache-Control = "immutable, max-age=31536000"
-    # Accept-Encoding = "lzip, deflate, br"
+    # Accept-Encoding = "gzip, deflate, br"
 
 [[headers]]
   for = "*.js"
   [headers.values]
     Content-Type = "text/javascript; charset=utf-8"
     Cache-Control = "immutable, max-age=31536000"
-    # Accept-Encoding = "lzip, deflate, br"
+    # Accept-Encoding = "gzip, deflate, br"
 
 [[headers]]
   for = "/site.webmanifest"
@@ -86,24 +86,23 @@
 [[headers]]
   for = "*.html.br"
   [headers.values]
-    # Content-Type = "text/html; charset=utf-8"
-    AddType = "text/html" .br
-    AddEncoding = br .br
+    Content-Type = "text/html; .br"
+    Accept-Encoding = "br .br"
 
 [[headers]]
   for = "*.css.br"
   [headers.values]
-    AddType = "text/css" .br
-    AddEncoding = br .br
+    Content-Type = "text/css; .br"
+    Accept-Encoding = "br .br"
 
 [[headers]]
   for = "*.js.br"
   [headers.values]
-    AddType = "text/javascript" .br
-    AddEncoding = br .br
+    Content-Type = "text/javascript; .br"
+    Accept-Encoding = "br .br"
 
 [[headers]]
   for = "*.svg.br"
   [headers.values]
-    AddType = "image/svg+xml" .br
-    AddEncoding = br .br
+    Content-Type = "image/svg+xml; .br"
+    Accept-Encoding = "br .br"
