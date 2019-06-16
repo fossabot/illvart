@@ -3,7 +3,6 @@ const prettyData = require("gulp-pretty-data");
 const imagemin = require("gulp-imagemin");
 const mozjpeg = require("imagemin-mozjpeg");
 const pngquant = require("imagemin-pngquant");
-const brotli = require("gulp-brotli");
 
 module.exports = ({ output, gulp, debug }) => {
 
@@ -99,21 +98,6 @@ module.exports = ({ output, gulp, debug }) => {
     gulp
       .src(["./src/robots.txt", "./src/_redirects"])
       .pipe(debug({ title: "Copy misc files:" }))
-      .pipe(gulp.dest(output))
-  );
-
-  // brotli compress
-  gulp.task("brotliCompress", () =>
-    gulp
-      .src(`${output}/**/*.{html,js,css,svg}`)
-      .pipe(
-        brotli.compress({
-          extension: "br",
-          skipLarger: false,
-          quality: 11,
-        })
-      )
-      .pipe(debug({ title: "Brotli compress:" }))
       .pipe(gulp.dest(output))
   );
 

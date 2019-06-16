@@ -69,7 +69,6 @@ exports.serve = gulp.series(
   "copy:images",
   "copy:misc",
   "workbox",
-  // "brotliCompress", // Don't include brotli on development version
   gulp.parallel(server, "watch:scss", "watch:js", "watch:nunjucks", () => {
     console.log(`${new Date().toLocaleTimeString()} - Development version build finished!`);
   })
@@ -92,7 +91,6 @@ exports.default = gulp.series(
   "workbox",
   "workbox:minify",
   "js:credit",
-  "brotliCompress",
   (cb) => {
     console.log(`${new Date().toLocaleTimeString()} - Production version build finished!`);
     cb();
