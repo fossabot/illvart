@@ -1,3 +1,8 @@
+# Please follow the rules to editing the scss.
+#
+# Don't include vendor prefix because we use autoprefixer for build.
+# The CSS order by alphabetical.
+
 plugins:
     - stylelint-order
     - stylelint-scss
