@@ -92,34 +92,3 @@
   for = "/assets/img/*.webp"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-
-# Specify Brotli-encoded assets
-[[headers]]
-  for = "*.html.br"
-  [headers.values]
-    Content-Type = "text/html; .br"
-    Accept-Encoding = "br"
-
-[[headers]]
-  for = "/assets/css/*.css.br"
-  [headers.values]
-    Content-Type = "text/css; .br"
-    Accept-Encoding = "br"
-
-    [[headers]]
-      for = "/assets/css/*.min.css.br"
-      [headers.values]
-        Content-Type = "text/css; .br"
-        Accept-Encoding = "br"
-
-[[headers]]
-  for = "*.js.br"
-  [headers.values]
-    Content-Type = "text/javascript; .br"
-    Accept-Encoding = "br"
-
-    [[headers]]
-      for = "*.min.js.br"
-      [headers.values]
-        Content-Type = "text/javascript; .br"
-        Accept-Encoding = "br"
