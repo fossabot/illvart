@@ -1,0 +1,17 @@
+//
+// GLOBAL settings
+// GLOBAL variables used across multiple files.
+//
+
+// Fonts
+$GLOBAL_FONT: "Roboto Mono", monospace;
+$GLOBAL_CODE_FONT: monospace;
+// Animation
+$GLOBAL_ANIM: cubic-bezier(.4, 0, .2, 1);
+
+@import "plugin/normalize";
+@import "utils/reset";
+@import "settings/all";
+@import "layout/all";
+@import "components/all";
+@import "utils/reduce";

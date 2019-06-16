@@ -1,0 +1,23 @@
+{% extends "templates/base.njk" %}
+
+{# 404 page configuration #}
+{% set page = {
+    id: "error",
+    title: "404 Not Found",
+    content: {
+      error_title: "404",
+      error_summary: "Nah, the resource you requested <strong>not found</strong>.",
+      error_back: "Back to homepage"
+    }
+  }
+%}
+
+{% block content %}
+<div class="error-container">
+  <div class="error-content">
+    <h1>{{ page.content.error_title }}</h1>
+    <p>{{ page.content.error_summary | safe }}</p>
+    <a href="/">{{ page.content.error_back }}</a>
+  </div>
+</div>
+{% endblock %}

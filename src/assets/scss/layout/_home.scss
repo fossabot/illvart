@@ -1,0 +1,214 @@
+// Card settings
+$CARD_WIDTH: 600px;
+$CARD_RADIUS: 6px;
+$CARD_BG: var(--white);
+
+// Cover settings
+$COVER_BG: var(--color-dark);
+$AVATAR_BG: var(--color-gray);
+$AVATAR_BORDER: var(--white);
+$NAME_TEXT_COLOR: var(--white);
+$POSITION_TEXT_COLOR: var(--color-light);
+
+// Follow settings
+$FOLLOW_TEXT_COLOR: var(--white);
+$FOLLOW_BG: var(--color-dark);
+$FOLLOW_BG_HOVER: var(--color-primary);
+$FOLLOW_ANIM_SPEED: .2s;
+
+// Card
+.card {
+  background-color: $CARD_BG;
+  border-radius: $CARD_RADIUS;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  max-width: $CARD_WIDTH;
+  width: 100%;
+}
+
+// Container
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 16px;
+
+  &.center {
+    text-align: center;
+  }
+}
+
+// Content
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto; // fallback
+  // min-height: 400px;
+}
+
+// Cover
+.cover {
+  background-color: $COVER_BG;
+  border-top-left-radius: $CARD_RADIUS;
+  border-top-right-radius: $CARD_RADIUS;
+  padding: 32px 16px;
+  text-align: center;
+  z-index: 1;
+}
+
+.avatar {
+  display: inline-block;
+  height: 120px;
+  width: 120px;
+
+  img {
+    background-color: $AVATAR_BG;
+    border: 2px solid $AVATAR_BORDER;
+    border-radius: 50%;
+    box-shadow: 0 9px 30px 3px rgba(0, 0, 0, .16);
+    cursor: pointer;
+    display: inline-block;
+    height: 120px;
+    position: relative;
+    width: 120px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.name {
+  color: $NAME_TEXT_COLOR;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 18px 0 8px;
+}
+
+.position {
+  color: $POSITION_TEXT_COLOR;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+  .name {
+    font-size: 16px;
+  }
+
+  .position {
+    font-size: 14px;
+  }
+}
+
+// Resume content
+.resume {
+  padding: 16px;
+
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: normal;
+    text-transform: uppercase;
+
+    &[id]:target::before {
+      content: "";
+      display: block;
+      height: 64px;
+      margin-top: -64px;
+      visibility: hidden;
+    }
+  }
+}
+
+// List
+.list {
+  margin: 14px 0;
+
+  ul {
+    font-size: 0px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+      padding: 6px 0;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      > a {
+        border-bottom: 2px solid currentColor;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &.horizontal ul > li {
+    display: inline;
+    margin: 0 4px;
+  }
+}
+
+.container.center .list.horizontal {
+  margin: 14px auto;
+  max-width: 320px;
+}
+
+// Footer
+.footer {
+  // align-items: center;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  margin: 16px auto 0;
+  padding: 16px;
+  text-align: center;
+  user-select: none;
+}
+
+// Follow
+.follow {
+  font-size: 0;
+
+  a {
+    background-color: $FOLLOW_BG;
+    border-radius: 50%;
+    box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
+    color: $FOLLOW_TEXT_COLOR;
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    margin: 6px 8px;
+    min-width: 34px;
+    overflow: hidden;
+    padding: 0;
+    transition: box-shadow $FOLLOW_ANIM_SPEED $GLOBAL_ANIM;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 34px;
+    will-change: box-shadow;
+
+    &:focus,
+    &:hover {
+      background-color: $FOLLOW_BG_HOVER;
+      box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+      color: $FOLLOW_TEXT_COLOR;
+      opacity: 1;
+    }
+
+    > i {
+      color: currentColor;
+      font-size: 15px;
+    }
+  }
+}

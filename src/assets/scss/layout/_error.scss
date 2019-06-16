@@ -1,0 +1,23 @@
+// 404 page
+.error {
+  background-color: var(--white);
+}
+
+.error-container {
+  display: table;
+  text-align: center;
+  width: 100%;
+
+  .error-content {
+    display: table-cell;
+    font-size: 16px;
+    height: 100vh;
+    vertical-align: middle;
+
+    h1 {
+      font-size: 68px;
+      line-height: normal;
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<script type="application/ld+json">
+{% minifyjson %}
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ metadata.author.name }}",
+  "url": "{{ metadata.url }}",
+  "sameAs": [
+    "{{ metadata.author.social.twitter }}",
+    "{{ metadata.author.social.facebook }}",
+    "{{ metadata.author.social.instagram }}"
+  ]
+}
+{% endminifyjson %}
+
+</script>

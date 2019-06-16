@@ -1,7 +1,7 @@
 {
   "name": "illvart",
   "description": "Personal website running on Node.js.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "MNF <illvart.email@gmail.com>",
   "main": "n/a",
   "license": "MIT",
@@ -16,16 +16,52 @@
     "Workbox"
   ],
   "dependencies": {
-    "http-server": "^0.11.1"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "babel-minify": "^0.5.0",
-    "gh-pages": "^2.0.1",
-    "workbox-cli": "^4.3.1"
+    "browser-sync": "^2.26.5",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "del": "^4.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-google": "^0.13.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "gulp": "^4.0.2",
+    "gulp-babel-minify": "^0.5.0",
+    "gulp-brotli": "^1.2.2",
+    "gulp-cssbeautify": "^1.0.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-postcss": "^8.0.0",
+    "gulp-prettier": "^2.1.0",
+    "gulp-pretty-data": "^0.1.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylelint": "^9.0.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "postcss-discard-comments": "^4.0.2",
+    "postcss-preset-env": "^6.6.0",
+    "prettier": "^1.18.2",
+    "pretty-data": "^0.40.0",
+    "stylelint": "^10.1.0",
+    "stylelint-order": "^3.0.0",
+    "stylelint-scss": "^3.8.0",
+    "workbox-build": "^4.3.1"
   },
   "scripts": {
-    "dev": "http-server ./static/ -p 6661",
-    "deploy": "gh-pages -d ./static/",
-    "inject-manifest": "workbox injectManifest && minify --mangle.topLevel ./static/sw.js --outFile ./static/sw.js"
+    "lint-js": "gulp lint:js",
+    "lint-scss": "gulp lint:scss",
+    "lint": "yarn lint-js && yarn lint-scss",
+    "clean": "gulp clean",
+    "serve": "gulp serve",
+    "build": "gulp",
+    "local": "node ./server.js"
   }
 }

@@ -1,0 +1,28 @@
+plugins:
+    - prettier
+
+extends:
+    - eslint:recommended
+    - google
+
+rules:
+    no-console: off
+    quotes: [error, double]
+    comma-dangle: [error, never]
+    indent: [error, 2]
+    no-unused-vars: warn
+    no-var: off
+
+env:
+    browser: true
+    node: true
+    es6: true
+    mocha: true
+
+parserOptions:
+    ecmaVersion: 2017
+    sourceType: module
+
+globals:
+    importScripts: false
+    workbox: false

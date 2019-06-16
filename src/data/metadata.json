@@ -1,0 +1,51 @@
+{
+
+  "title": "MNF – Blogger and Front-End Developer",
+  "short_title": "MNF",
+  "url": "https://illvart.com",
+  "description": "Project, Portfolio, Blogger Developer and Front-End Developer, and more.",
+  "ogImage": "/assets/img/banner.png",
+
+  "author": {
+    "name": "Muhammad Nur Fuad",
+    "repository": "https://github.com/illvart/illvart",
+    "email": "illvart.email@gmail.com",
+
+    "social": {
+      "github": "https://github.com/illvart",
+      "twitter": "https://twitter.com/illvart",
+      "facebook": "https://facebook.com/illvart",
+      "instagram": "https://instagram.com/illvart_"
+    }
+  },
+
+  "twitter": {
+    "site": "@illvart",
+    "creator": "@illvart"
+  },
+
+  "facebook": {
+    "app_id": "269764660396935",
+    "pages": "2254011318151740"
+  },
+
+  "verify": {
+    "google": "OPqICugr4hwp6F-9eZVmHirK-XUmk5bdSwZ43u639AE",
+    "bing": "EE192BA63F2FD24B8CEA244D93BACB7F",
+    "yandex": "29bf6e6f4141012a"
+  },
+
+  "google_analytics": "UA-130590648-1",
+
+  "site": {
+    "dir": "ltr",
+    "lang": "en",
+    "theme": "#2962ff"
+  },
+
+  "cdn": {
+    "font": "https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,500,700&display=swap",
+    "mdi": "https://cdn.jsdelivr.net/npm/@mdi/font@3.6.95/css/materialdesignicons.min.css"
+  }
+
+}

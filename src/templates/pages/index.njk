@@ -1,0 +1,162 @@
+{% extends "templates/base.njk" %}
+
+{# home page configuration #}
+{% set page = {
+    id: "home",
+    title: metadata.title,
+    center: true,
+    content: {
+      cover: {
+        name: "muhammad nur fuad" | toTitleCase,
+        position: "Blogger and Front-End Developer"
+      },
+      resume: {
+        about: "<p>Hello, my name is <strong>Muhammad Nur Fuad</strong>. I was born in <strong>Purworejo</strong> - <strong>Central Java</strong> - <strong>Indonesia</strong>.</p><p>Blogger and Front-End Developer.</p><p>I'm Linux user, especially <strong>Arch Linux</strong>. 👨‍💻</p><p>I'm currently creating a Blogger template and some useful tutorials, guides about Linux and Web Developer.</p><br>"
+      }
+    },
+    string: {
+      heading: {
+        blog: "Blog",
+        contact: "Contact",
+        support: "Support",
+        source: "Source"
+      }
+    }
+  }
+%}
+
+{% block content %}
+<div class="content card"><!-- Start content -->
+
+  <section class="cover"><!-- Start cover -->
+    <a class="avatar" href="/" title="Avatar">
+      <img draggable="false" src="/assets/img/me.png" alt="{{ page.content.cover.name or metadata.author.name }}">
+    </a>
+    <h1 class="name">{{ page.content.cover.name or metadata.author.name }}</h1>
+    <h2 class="position">{{ page.content.cover.position }}</h2>
+  </section><!-- End cover -->
+
+  <section class="resume"><!-- Start resume -->
+
+    <!-- // Start about \\-->
+    {{ page.content.resume.about | safe | trim }}
+    <!--// End about \\-->
+
+    <!-- // Start blog \\ -->
+    <h3 id="blog">{{ page.string.heading.blog }}</h3>
+    <div class="list {% if page.center == true %} horizontal{% endif %}">
+      <ul>
+
+        <li>
+          <a href="https://www.pinkyui.com" onclick="ga('send', 'event', {eventAction: 'click', eventLabel: event.target.href, eventCategory: 'Blog'})" title="Pinkyui" rel="noopener noreferrer" target="_blank">Pinkyui</a>
+        </li>
+        <li>
+          <a href="https://www.emirar.com" onclick="ga('send', 'event', {eventAction: 'click', eventLabel: event.target.href, eventCategory: 'Blog'})" title="Emirar" rel="noopener noreferrer" target="_blank">Emirar</a>
+        </li>
+
+      </ul>
+    </div>
+    <br>
+    <!--// End blog \\-->
+
+    <!-- // Start contact \\ -->
+    <h3 id="contact">{{ page.string.heading.contact }}</h3>
+    <p>
+      For personal use <a href="https://m.me/illvart" title="Facebook Messenger (Fanspage)" rel="nofollow noopener noreferrer" target="_blank"><strong>Facebook Messenger (Fanspage)</strong></a>.
+      <br>
+      For commercial use <a href="{{ 'mailto:&#105;&#108;&#108;&#118;&#097;&#114;&#116;&#046;&#101;&#109;&#097;&#105;&#108;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;' | safe }}{{ '?Subject=Hello MNF' | toEncodeURI }}" title="Email" target="_top"><strong>email</strong></a> with the subject "<strong>Hello MNF</strong>".
+    </p>
+    <br>
+    <!--// End contact \\ -->
+
+    <!-- // Start support \\ -->
+    <h3 id="support">{{ page.string.heading.support }}</h3>
+    If you love my work and want me to keep working, please consider supporting me. 🙏
+    <p>
+      <label class="btn" for="modal">Donate <i class="mdi mdi-heart" aria-hidden="true"></i></label>
+    </p>
+    <input class="modal-state" id="modal" type="checkbox"/>
+    <div class="modal">
+      <label class="modal-bg" for="modal"></label>
+      <div class="modal-inner">
+        <label class="modal-close" for="modal"></label>
+        <h2 class="modal-title">DONATE ❤️</h2>
+
+        <p>Thank you for your support! 🙏</p>
+
+        <h3>Monthly donations</h3>
+        <p>
+          <a href="https://patreon.com/illvart" onclick="ga('send', 'event', {eventAction: 'click', eventLabel: event.target.href, eventCategory: 'Donate'})" title="Donate with Patreon" rel="noopener noreferrer" target="_blank">Patreon</a>
+        </p>
+
+        <h3>One-time donations</h3>
+        <p>
+          <a href="http://bit.ly/illvartCoff" onclick="ga('send', 'event', {eventAction: 'click', eventLabel: event.target.href, eventCategory: 'Donate'})" title="Donate with BuyMeACoffee.com" rel="noopener noreferrer" target="_blank">BuyMeACoffee.com</a>
+          <br>
+          <a href="http://bit.ly/illvartCrypto" onclick="ga('send', 'event', {eventAction: 'click', eventLabel: event.target.href, eventCategory: 'Donate'})" title="Donate with Crypto" rel="noopener noreferrer" target="_blank">Crypto</a> (Bitcoin, Ethereum)
+        </p>
+
+        <h4>Indonesians</h4>
+        <p>Bank BCA: 2340306573 a/n Muhammad Nur Fuad</p>
+
+      </div>
+    </div>
+    <br>
+    <!--// End support \\-->
+
+    <!-- // Start source \\ -->
+    <h3 id="source">{{ page.string.heading.source }}</h3>
+    <p>Source code on this website released under the MIT License.<br><a href="https://github.com/illvart/aboutme" title="GitHub Repository" rel="noopener noreferrer" target="_blank">View source code</a>.</p>
+    <!--// End source \\-->
+
+  </section><!-- End resume -->
+
+</div><!-- End content -->
+
+<footer class="footer card"><!-- Start footer -->
+  <div class="follow">
+
+    <!--
+    Get the icons name at https://petershaggynoble.github.io/MDI-Sandbox/
+    Change href, title, aria-label and mdi icon class.
+    -->
+
+    <a href="https://twitter.com/illvart" onclick="ga('send', 'event', {eventAction: 'click', eventLabel: event.target.href, eventCategory: 'Social Media'})" title="Twitter" aria-label="Follow me on Twitter" rel="noopener noreferrer" target="_blank">
+      <i class="mdi mdi-twitter" aria-hidden="true"></i>
+    </a>
+
+    <a href="https://facebook.com/illvart" onclick="ga('send', 'event', {eventAction: 'click', eventLabel: event.target.href, eventCategory: 'Social Media'})" title="Facebook" aria-label="Follow me on Facebook" rel="noopener noreferrer" target="_blank">
+      <i class="mdi mdi-facebook" aria-hidden="true"></i>
+    </a>
+
+    <a href="https://instagram.com/illvart_" onclick="ga('send', 'event', {eventAction: 'click', eventLabel: event.target.href, eventCategory: 'Social Media'})" title="Instagram" aria-label="Follow me on Instagram" rel="noopener noreferrer" target="_blank">
+      <i class="mdi mdi-instagram" aria-hidden="true"></i>
+    </a>
+
+    <a href="https://github.com/illvart" onclick="ga('send', 'event', {eventAction: 'click', eventLabel: event.target.href, eventCategory: 'Social Media'})" title="GitHub" aria-label="Follow me on GitHub" rel="noopener noreferrer" target="_blank">
+      <i class="mdi mdi-github-circle" aria-hidden="true"></i>
+    </a>
+
+    <a href="https://www.reddit.com/user/illvart" onclick="ga('send', 'event', {eventAction: 'click', eventLabel: event.target.href, eventCategory: 'Social Media'})" title="Reddit" aria-label="Follow me on Reddit" rel="noopener noreferrer" target="_blank">
+      <i class="mdi mdi-reddit" aria-hidden="true"></i>
+    </a>
+
+    <a href="https://medium.com/@illvart" onclick="ga('send', 'event', {eventAction: 'click', eventLabel: event.target.href, eventCategory: 'Social Media'})" title="Medium" aria-label="Follow me on Medium" rel="noopener noreferrer" target="_blank">
+      <i class="mdi mdi-medium" aria-hidden="true"></i>
+    </a>
+
+    <a href="https://id.quora.com/profile/illvart" onclick="ga('send', 'event', {eventAction: 'click', eventLabel: event.target.href, eventCategory: 'Social Media'})" title="Quora" aria-label="Follow me on Quora" rel="noopener noreferrer" target="_blank">
+      <i class="mdi mdi-quora" aria-hidden="true"></i>
+    </a>
+
+    <a href="https://stackoverflow.com/users/7878157" onclick="ga('send', 'event', {eventAction: 'click', eventLabel: event.target.href, eventCategory: 'Social Media'})" title="Stack Overflow" aria-label="Follow me on Stack Overflow" rel="noopener noreferrer" target="_blank">
+      <i class="mdi mdi-stack-overflow" aria-hidden="true"></i>
+    </a>
+
+    <a href="https://support.google.com/blogger/profile/5867815" onclick="ga('send', 'event', {eventAction: 'click', eventLabel: event.target.href, eventCategory: 'Social Media'})" title="Blogger Community" aria-label="Follow me on Blogger Community" rel="noopener noreferrer" target="_blank">
+      <i class="mdi mdi-blogger" aria-hidden="true"></i>
+    </a>
+
+  </div>
+</footer><!-- End footer -->
+{% endblock %}

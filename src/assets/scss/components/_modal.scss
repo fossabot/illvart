@@ -1,0 +1,137 @@
+// Modal settings
+$MODAL_OVERLAY: rgba(0, 0, 0, .6);
+$MODAL_BG: var(--white);
+$MODAL_ANIM: .1s ease-out;
+$MODAL_RADIUS: 4px;
+$MODAL_CLOSE: #616161;
+$MODAL_CLOSE_HOVER: var(--color-dark);
+
+// Modal
+.modal {
+  background-color: $MODAL_OVERLAY;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity $MODAL_ANIM;
+  visibility: hidden;
+  will-change: opacity;
+  z-index: 1000;
+
+  * {
+    text-align: left;
+  }
+}
+
+.modal-bg {
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.modal-state {
+  display: none;
+
+  &:checked + .modal {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+
+    .modal-inner {
+      top: 0;
+    }
+  }
+}
+
+.modal-inner {
+  background-color: $MODAL_BG;
+  border-radius: $MODAL_RADIUS;
+  bottom: 0;
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, .2), 0 24px 38px 3px rgba(0, 0, 0, .14), 0 9px 46px 8px rgba(0, 0, 0, .12);
+  height: 50%;
+  left: 0;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 16px;
+  position: absolute;
+  right: 0;
+  top: -50%;
+  transition: top $MODAL_ANIM;
+  width: 50%;
+
+  .modal-title {
+    font-size: 24px;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    font-size: 15px;
+    overflow: hidden;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin: 12px 0;
+    text-transform: none;
+  }
+
+  h4 {
+    font-size: 18px;
+    margin: 9px 0;
+    text-transform: none;
+  }
+
+  h5 {
+    font-size: 16px;
+    margin: 6px 0;
+    text-transform: none;
+  }
+}
+
+.modal-close {
+  cursor: pointer;
+  height: 22px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 22px;
+
+  &::after,
+  &::before {
+    background-color: $MODAL_CLOSE;
+    content: "";
+    display: block;
+    height: 22px;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: rotate(45deg);
+    width: 2px;
+  }
+
+  &:hover {
+    &::after,
+    &::before {
+      background-color: $MODAL_CLOSE_HOVER;
+    }
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-inner {
+    width: 90%;
+  }
+}

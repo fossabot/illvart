@@ -1,0 +1,71 @@
+// Button settings
+$BUTTON_TEXT_COLOR: var(--white);
+$BUTTON_BG: var(--color-dark);
+$BUTTON_BG_HOVER: #424242;
+$BUTTON_BG_FOCUS: #545454;
+$BUTTON_RADIUS: 4px;
+$BUTTON_MARGIN: 6px 0 0;
+$BUTTON_ANIM_SPEED: .2s;
+
+// Button
+// The button with fallback
+.btn {
+  align-items: center;
+  background-color: $BUTTON_BG;
+  background-image: none;
+  border: 0;
+  border-radius: $BUTTON_RADIUS;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  color: $BUTTON_TEXT_COLOR;
+  cursor: pointer;
+  display: inline-block; // fallback
+  display: inline-flex;
+  font-family: $GLOBAL_FONT;
+  font-size: 14px;
+  font-weight: 500;
+  height: 36px;
+  justify-content: center;
+  letter-spacing: 2px;
+  line-height: 36px;
+  margin: $BUTTON_MARGIN;
+  min-width: 88px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: uppercase;
+  transition: box-shadow $BUTTON_ANIM_SPEED $GLOBAL_ANIM;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  will-change: box-shadow;
+  word-spacing: normal;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $BUTTON_BG_HOVER;
+  }
+
+  &:focus {
+    background-color: $BUTTON_BG_FOCUS;
+  }
+
+  &:active {
+    background-color: $BUTTON_BG_FOCUS;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+  }
+
+  .mdi {
+    margin-left: 6px;
+  }
+}

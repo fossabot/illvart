@@ -1,6 +1,6 @@
 [build]
-  publish = "static"
-  command = "yarn inject-manifest"
+  publish = "dist"
+  command = "gulp default"
 
 [[headers]]
   for = "/*"
@@ -32,14 +32,14 @@
   [headers.values]
     Content-Type = "text/css; charset=utf-8"
     Cache-Control = "immutable, max-age=31536000"
-    Accept-Encoding = "gzip, deflate, br"
+    # Accept-Encoding = "gzip, deflate, br"
 
 [[headers]]
   for = "*.js"
   [headers.values]
     Content-Type = "text/javascript; charset=utf-8"
     Cache-Control = "immutable, max-age=31536000"
-    Accept-Encoding = "gzip, deflate, br"
+    # Accept-Encoding = "gzip, deflate, br"
 
 [[headers]]
   for = "/site.webmanifest"
@@ -81,3 +81,29 @@
   for = "*.webp"
   [headers.values]
     Cache-Control = "immutable, max-age=31536000"
+
+# Specify Brotli-encoded assets
+[[headers]]
+  for = "*.html.br"
+  [headers.values]
+    # Content-Type = "text/html; charset=utf-8"
+    AddType "text/html" .gz
+    AddEncoding gz .gz
+
+[[headers]]
+  for = "*.css.br"
+  [headers.values]
+    AddType "text/css" .gz
+    AddEncoding gz .gz
+
+[[headers]]
+  for = "*.js.br"
+  [headers.values]
+    AddType "text/javascript" .gz
+    AddEncoding gz .gz
+
+[[headers]]
+  for = "*.svg.br"
+  [headers.values]
+    AddType "image/svg+xml" .gz
+    AddEncoding gz .gz

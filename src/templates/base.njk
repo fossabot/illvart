@@ -1,0 +1,53 @@
+{%- set content -%}
+  {% block content %}
+  {# Content #}
+  {% endblock %}
+{%- endset -%}
+
+<!DOCTYPE html>
+<html dir="{{ metadata.site.dir }}" lang="{{ metadata.site.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }}</title>
+{% if page.id != "error" %}
+<meta name="description" content="{{ metadata.description }}">
+<link rel="canonical" href="{{ metadata.url }}">
+<meta name="robots" content="index, follow">
+{# meta open graph #}
+{%- include "templates/includes/meta-og.njk" -%}
+{# meta twitter #}
+{%- include "templates/includes/meta-twitter.njk" -%}
+{# meta facebook #}
+{%- include "templates/includes/meta-facebook.njk" -%}
+{# meta misc #}
+{%- include "templates/includes/meta-misc.njk" -%}
+{# meta favicon #}
+{%- include "templates/includes/meta-favicon.njk" -%}
+{# meta verify #}
+{%- include "templates/includes/meta-verify.njk" -%}
+{# meta dns #}
+{%- include "templates/includes/meta-dns.njk" -%}
+{% endif %}
+{% include "templates/includes/css.njk" %}
+{% if page.id != "error" %}
+{# Schema #}
+{%- include "templates/includes/schema.njk" -%}
+{% endif %}
+{% include "templates/includes/analytics.njk" %}
+</head>
+<body {% if page.id %}class="{{ page.id }}"{% endif %}>
+<main{% if page.id != "error" %} class="container{% if page.center == true %} center{% endif %}"{% endif %}><!-- Start main -->
+
+{{ content | safe | trim }}
+
+{% if page.id != "error" %}
+<!-- Always need a JavaScipt -->
+<noscript><br>You always need JavaScript to run the web.</noscript>
+{% endif %}
+</main><!-- End main -->
+{% if page.id != "error" -%}
+{% include "templates/includes/script.njk" %}
+{%- endif %}
+</body>
+</html>

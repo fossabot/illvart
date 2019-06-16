@@ -38,5 +38,14 @@ node_modules/
 # Bower dependency directory (https://bower.io/)
 bower_components
 
+# Build output
+dist/
+
+# Reports linting
+.reports/
+
 # Ignore doc
 doc/
+
+# Ignore CHANGELOG
+CHANGELOG.md
