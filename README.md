@@ -2,6 +2,7 @@
 
 > My personal website running on Node.js
 
+[![Build Status](https://travis-ci.com/illvart/illvart.svg?branch=master)](https://travis-ci.com/illvart/illvart)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0392af17-3c20-4278-8139-7dbabd347d5c/deploy-status)](https://app.netlify.com/sites/illvart/deploys)
 
 ## Note
