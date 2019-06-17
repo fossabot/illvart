@@ -60,8 +60,8 @@ const envMode = mode => cb => ((process.env.NODE_ENV = mode), cb());
 exports.serve = gulp.series(
   envMode("development"),
   "clean",
-  "lint:js",
-  "lint:scss",
+  // "lint:js",
+  // "lint:scss",
   gulp.parallel("css:dev", "js:dev"),
   "prettify",
   "nunjucks:render",
