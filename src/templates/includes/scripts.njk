@@ -1,19 +1,6 @@
 <!-- Scripts -->
 {% block scripts %}
 <script>
-/*if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function() {
-    navigator.serviceWorker
-      .register("/sw.js")
-      .then(function() {
-        console.log("Service Worker registered! \uD83D\uDE0E");
-      })
-      .catch(function(err) {
-        console.log("Service Worker registration failed \uD83D\uDE2B ", err);
-      });
-  });
-}*/
-
 if("serviceWorker"in navigator)window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").then(function(){console.log("Service Worker registered! \ud83d\ude0e")})["catch"](function(err){console.log("Service Worker registration failed \ud83d\ude2b",err)})});
 </script>
 {% if mode == "production" %}
