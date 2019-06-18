@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: '#{$mdi-font-name}';
-  font-display: swap; // https://developers.google.com/web/updates/2016/02/font-display
+  font-display: auto; // https://developers.google.com/web/updates/2016/02/font-display
   src: url('#{$mdi-font-path}/#{$mdi-filename}-webfont.eot');
   src: url('#{$mdi-font-path}/#{$mdi-filename}-webfont.eot?#iefix') format('embedded-opentype'),
     url('#{$mdi-font-path}/#{$mdi-filename}-webfont.woff2') format('woff2'),
