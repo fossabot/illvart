@@ -62,6 +62,6 @@
     "clean": "gulp clean",
     "serve": "gulp serve",
     "build": "gulp",
-    "local": "node ./server.js"
+    "local": "node --experimental-modules ./server.mjs"
   }
 }
