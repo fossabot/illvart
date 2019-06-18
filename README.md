@@ -9,14 +9,16 @@
 Please note this is **experimental** version, if you are interested in using this template, please use [github.com/illvart/aboutme](https://github.com/illvart/aboutme).
 
 ### Dev
-```
+```bash
 # build and running locally
 yarn serve
 
 # linting javascript
 yarn lint-js
+
 # linting scss
 yarn lint-scss
+
 # or both javascript and scss
 yarn lint
 
