@@ -1,11 +1,12 @@
 {
   "name": "Muhammad Nur Fuad",
   "short_name": "MNF",
+  "theme_color": "#2962ff",
+  "background_color": "#f2f2f2",
+  "scope": "/",
   "start_url": "/?utm_source=homescreen",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#f2f2f2",
-  "theme_color": "#2962ff",
   "icons": [
     {
       "src": "/assets/img/logo/icon-128x128.png",

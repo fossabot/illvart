@@ -12,6 +12,7 @@ rules:
     indent: [error, 2]
     no-unused-vars: warn
     no-var: off # use var just for browser
+    spaced-comment: off
 
 env:
     browser: true

@@ -44,8 +44,11 @@
   },
 
   "cdn": {
-    "font": "https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,500,700&display=swap",
-    "mdi": "https://cdn.jsdelivr.net/npm/@mdi/font@3.6.95/css/materialdesignicons.min.css"
+    "font": "https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,500,700&display=swap"
+  },
+
+  "file_name": {
+    "mdi": "materialdesignicons-v3.6.95"
   }
 
 }

@@ -20,13 +20,15 @@ workbox.routing.registerRoute(
     cacheName: "google-fonts-stylesheets"
   })
 );
+
 // Cache jsDelivr
-workbox.routing.registerRoute(
+/*workbox.routing.registerRoute(
   /^https:\/\/cdn\.jsdelivr\.net\//,
   new workbox.strategies.StaleWhileRevalidate({
     cacheName: "jsdelivr"
   })
-);
+);*/
+
 // Handle any images
 workbox.routing.registerRoute(
   /\.(?:jpg|jpeg|png|gif|webp|ico|svg)$/,
@@ -34,7 +36,7 @@ workbox.routing.registerRoute(
     cacheName: "pwa-images",
     plugins: [
       new workbox.expiration.Plugin({
-        maxEntries: 60,
+        // maxEntries: 60,
         maxAgeSeconds: 60 * 60 * 24 * 30 // 30 Days
       })
     ]

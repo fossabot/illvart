@@ -1,8 +1,9 @@
-const nunjucksRender = require("gulp-nunjucks-render");
 const { nunjucks } = require("gulp-nunjucks-render");
+const nunjucksRender = require("gulp-nunjucks-render");
+const sitemap = require("gulp-sitemap");
 const { pd } = require("pretty-data");
 
-module.exports = ({ cfg, output, data, browserSync, reload, gulp, debug }) => {
+module.exports = ({ cfg, output, data, browserSync, reload, generateId, gulp, debug, inject }) => {
 
   const manageEnvironment = plugin => {
     // global
@@ -49,6 +50,7 @@ module.exports = ({ cfg, output, data, browserSync, reload, gulp, debug }) => {
     }
   };
 
+  // nunjucks render
   gulp.task("nunjucks:render", () =>
     gulp
       .src(paths.src.pages)
@@ -65,7 +67,14 @@ module.exports = ({ cfg, output, data, browserSync, reload, gulp, debug }) => {
           },
           manageEnv: manageEnvironment,
           data: {
-            metadata: data
+            // store string
+            metadata: data,
+            // dynamic css name
+            css_name_dev: `style.${generateId}.css`,
+            css_name_prod: `style.${generateId}.min.css`,
+            // dynamic js name
+            js_name_dev: `app.${generateId}.js`,
+            js_name_prod: `app.${generateId}.min.js`
           }
         })
       )
@@ -74,9 +83,34 @@ module.exports = ({ cfg, output, data, browserSync, reload, gulp, debug }) => {
       .pipe(browserSync.stream())
   );
 
+  // sitemap generator
+  gulp.task("sitemap", () =>
+    gulp
+      .src(`${output}/**/*.html`, {
+        read: false
+      })
+      .pipe(
+        sitemap({
+          siteUrl: `${data.url}`
+        })
+      )
+      .pipe(debug({ title: "Generate sitemap:" }))
+      .pipe(gulp.dest(output))
+  );
+
+  // inject sitemap url to robots.txt
+  gulp.task("robots.txt", () =>
+    gulp
+      .src("./src/robots.txt")
+      // inject after Allow: /
+      .pipe(inject.after("Allow: /", `\n\nSitemap: ${data.url}/sitemap.xml`))
+      .pipe(debug({ title: "Inject sitemap url:" }))
+      .pipe(gulp.dest(output))
+  );
+
   // watch nunjucks development mode
   gulp.task("watch:nunjucks", () => {
-    gulp.watch(paths.src.templates, gulp.series("nunjucks:render", reload));
+    gulp.watch(paths.src.templates, gulp.series("nunjucks:render", "sitemap", reload));
   });
 
 };

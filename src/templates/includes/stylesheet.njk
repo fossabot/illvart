@@ -1,0 +1,10 @@
+<!-- Google Fonts -->
+<link rel="stylesheet" href="{{ metadata.cdn.font }}">
+<!-- Material Design Icons (mdi) -->
+<link rel="stylesheet" href="/assets/css/{{ metadata.file_name.mdi }}.css">
+<!-- Style -->
+{% if mode == "production" %}
+<link rel="stylesheet" href="/assets/css/{{ css_name_prod }}">
+{% else %}
+<link rel="stylesheet" href="/assets/css/{{ css_name_dev }}">
+{% endif %}

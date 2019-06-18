@@ -1,3 +1,2 @@
 User-Agent: *
 Allow: /
-Sitemap: https://illvart.com/sitemap.xml

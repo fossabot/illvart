@@ -1,3 +1,4 @@
 dist/
 node_modules/
-src/assets/scss/plugin/**/*.scss
+src/assets/scss/mdi/
+src/assets/scss/style/plugin/

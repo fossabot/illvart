@@ -15,11 +15,13 @@ module.exports = ({ output, gulp, debug }) => {
           html5: true,
           collapseBooleanAttributes: true,
           collapseWhitespace: true,
-          decodeEntities: true,
+          decodeEntities: false, // avoid decode email address
           preventAttributesEscaping: true,
+          removeAttributeQuotes: true,
           removeComments: true,
           removeScriptTypeAttributes: true,
-          removeStyleLinkTypeAttributes: true
+          removeStyleLinkTypeAttributes: true,
+          removeTagWhitespace: false
         })
       )
       .pipe(debug({ title: "Minify HTML:" }))
@@ -27,7 +29,7 @@ module.exports = ({ output, gulp, debug }) => {
   );
 
   // minify xml, json
-  const xml_json_Input = ["./src/sitemap.xml", "./src/site.webmanifest"]; // avoid copying private files
+  const xml_json_Input = ["./src/site.webmanifest"]; // avoid copying private files
   gulp.task("minify", () =>
     gulp
       .src(xml_json_Input)
@@ -93,10 +95,18 @@ module.exports = ({ output, gulp, debug }) => {
       .pipe(gulp.dest(`${output}/assets/css/`))
   );
 
+  // copy fonts
+  gulp.task("copy:fonts", () =>
+    gulp
+      .src(["./src/assets/fonts/**"])
+      .pipe(debug({ title: "Copy fonts files:" }))
+      .pipe(gulp.dest(`${output}/assets/fonts/`))
+  );
+
   // copy misc files
   gulp.task("copy:misc", () =>
     gulp
-      .src(["./src/robots.txt", "./src/_redirects"])
+      .src(["./src/_redirects"])
       .pipe(debug({ title: "Copy misc files:" }))
       .pipe(gulp.dest(output))
   );

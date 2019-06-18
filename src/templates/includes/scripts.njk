@@ -1,0 +1,8 @@
+<!-- Scripts -->
+{% block scripts %}
+{% if mode == "production" %}
+<script async defer src="/{{ js_name_prod }}"></script>
+{% else %}
+<script async defer src="/{{ js_name_dev }}"></script>
+{% endif %}
+{% endblock %}

@@ -5,6 +5,7 @@ const del = require("del");
 const gulp = require("gulp");
 const debug = require("gulp-debug");
 const rename = require("gulp-rename");
+const inject = require("gulp-inject-string");
 const sourcemaps = require("gulp-sourcemaps");
 
 const loader = require("./loader");
@@ -19,6 +20,9 @@ const reload = cb => {
   cb();
 };
 
+const crypto = require("crypto");
+const generateId = crypto.randomBytes(6).toString("hex");
+
 // load gulp task
 loader("./gulp/", {
   cfg,
@@ -27,11 +31,13 @@ loader("./gulp/", {
   data,
   browserSync,
   reload,
+  generateId,
   fs,
   del,
   gulp,
   debug,
   rename,
+  inject,
   sourcemaps
 });
 
@@ -62,10 +68,13 @@ exports.serve = gulp.series(
   "clean",
   // "lint:js",
   // "lint:scss",
-  gulp.parallel("css:dev", "js:dev"),
+  gulp.parallel("css:dev", "mdi", "js:dev"),
   "prettify",
   "nunjucks:render",
+  "sitemap",
+  "robots.txt",
   "copy:css",
+  "copy:fonts",
   "copy:images",
   "copy:misc",
   "workbox",
@@ -80,10 +89,13 @@ exports.default = gulp.series(
   "clean",
   "lint:js",
   "lint:scss",
-  gulp.parallel("css:prod", "js:prod"),
+  gulp.parallel("css:prod", "mdi", "js:prod"),
   "minify",
   "nunjucks:render",
+  "sitemap",
+  "robots.txt",
   "copy:css",
+  "copy:fonts",
   // "copy:images",
   "imagesCompress",
   "copy:misc",

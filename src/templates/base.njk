@@ -29,7 +29,7 @@
 {# meta dns #}
 {%- include "templates/includes/meta-dns.njk" -%}
 {% endif %}
-{% include "templates/includes/css.njk" %}
+{% include "templates/includes/stylesheet.njk" %}
 {% if page.id != "error" %}
 {# Schema #}
 {%- include "templates/includes/schema.njk" -%}
@@ -47,7 +47,7 @@
 {% endif %}
 </main><!-- End main -->
 {% if page.id != "error" -%}
-{% include "templates/includes/script.njk" %}
+{% include "templates/includes/scripts.njk" %}
 {%- endif %}
 </body>
 </html>

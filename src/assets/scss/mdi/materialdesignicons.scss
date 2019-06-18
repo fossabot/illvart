@@ -1,0 +1,11 @@
+/* MaterialDesignIcons.com */
+
+// at _path.scss remove ?v=#{$mdi-version} fonts, because use preload and css name version
+
+@import "variables";
+@import "functions";
+@import "path";
+@import "core";
+@import "icons";
+@import "extras";
+@import "animated";
