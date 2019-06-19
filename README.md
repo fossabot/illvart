@@ -17,6 +17,8 @@ My personal website running on <strong>Node.js</strong> ⚡️
   </a>
 </p>
 
+---
+
 ## 🙏 Note
 Please note this is **experimental** version, if you are interested in using this template, please use [github.com/illvart/aboutme](https://github.com/illvart/aboutme).
 
