@@ -1,3 +1,12 @@
+/*!
+ * Copyright 2019 MNF (illvart). All Rights Reserved.
+ *
+ * Creative Commons Attribution 4.0 International License
+ * https://creativecommons.org/licenses/by/4.0/
+ *
+ * GitHub: https://github.com/illvart
+ */
+
 const htmlmin = require("gulp-htmlmin");
 const prettyData = require("gulp-pretty-data");
 const imagemin = require("gulp-imagemin");
@@ -7,7 +16,7 @@ const pngquant = require("imagemin-pngquant");
 module.exports = ({ output, gulp, debug }) => {
 
   // minify html
-  gulp.task("min:html", () =>
+  gulp.task("minifyHtml", () =>
     gulp
       .src(`${output}/**/*.html`)
       .pipe(

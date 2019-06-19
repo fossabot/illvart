@@ -1,3 +1,12 @@
+/*!
+ * Copyright 2019 MNF (illvart). All Rights Reserved.
+ *
+ * Creative Commons Attribution 4.0 International License
+ * https://creativecommons.org/licenses/by/4.0/
+ *
+ * GitHub: https://github.com/illvart
+ */
+
 const babelMinify = require("gulp-babel-minify");
 const prettier = require("gulp-prettier");
 const workbox = require("workbox-build");
@@ -47,7 +56,7 @@ module.exports = ({ output, browserSync, reload, fs, generateId, gulp, debug, re
       .pipe(gulp.dest(paths.output.js))
   );
 
-  // workbox inject
+  // workbox inject manifest
   gulp.task("workbox", () =>
     workbox
       .injectManifest({
@@ -72,6 +81,7 @@ module.exports = ({ output, browserSync, reload, fs, generateId, gulp, debug, re
         console.warn("Service worker generation failed 😵:", err);
       })
   );
+  // minify workbox with babelMinify, just for development mode
   gulp.task("workbox:minify", () =>
     gulp
       .src(sw, { allowEmpty: true })

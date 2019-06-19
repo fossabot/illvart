@@ -1,3 +1,12 @@
+/*!
+ * Copyright 2019 MNF (illvart). All Rights Reserved.
+ *
+ * Creative Commons Attribution 4.0 International License
+ * https://creativecommons.org/licenses/by/4.0/
+ *
+ * GitHub: https://github.com/illvart
+ */
+
 "use strict";
 
 const fs = require("fs");
@@ -62,7 +71,7 @@ const server = cb => {
 // environment mode
 const envMode = mode => cb => ((process.env.NODE_ENV = mode), cb());
 
-// development mode: serve
+// development mode: yarn serve
 exports.serve = gulp.series(
   envMode("development"),
   "clean",
@@ -83,7 +92,7 @@ exports.serve = gulp.series(
   })
 );
 
-// production mode: build
+// production mode: yarn build
 exports.default = gulp.series(
   envMode("production"),
   "clean",
@@ -97,9 +106,9 @@ exports.default = gulp.series(
   "copy:css",
   "copy:fonts",
   // "copy:images",
-  "imagesCompress",
+  "imagesCompress", // compress images only for production mode
   "copy:misc",
-  "min:html",
+  "minifyHtml",
   "workbox",
   "workbox:minify",
   "js:credit",

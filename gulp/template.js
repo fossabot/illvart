@@ -1,3 +1,12 @@
+/*!
+ * Copyright 2019 MNF (illvart). All Rights Reserved.
+ *
+ * Creative Commons Attribution 4.0 International License
+ * https://creativecommons.org/licenses/by/4.0/
+ *
+ * GitHub: https://github.com/illvart
+ */
+
 const { nunjucks } = require("gulp-nunjucks-render");
 const nunjucksRender = require("gulp-nunjucks-render");
 const sitemap = require("gulp-sitemap");
@@ -103,7 +112,10 @@ module.exports = ({ cfg, output, data, browserSync, reload, generateId, gulp, de
     gulp
       .src("./src/robots.txt")
       // inject after Allow: /
-      .pipe(inject.after("Allow: /", `\n\nSitemap: ${data.url}/sitemap.xml`))
+      // .pipe(inject.after("Allow: /", `\n\nSitemap: ${data.url}/sitemap.xml`))
+
+      // append
+      .pipe(inject.append(`\nSitemap: ${data.url}/sitemap.xml`))
       .pipe(debug({ title: "Inject sitemap url:" }))
       .pipe(gulp.dest(output))
   );

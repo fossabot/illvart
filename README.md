@@ -30,4 +30,8 @@ yarn local
 ```
 
 ## License
-Except as otherwise noted, the content licensed under the [MIT License](LICENSE), and code samples are licensed under the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
+Except as otherwise noted, the content licensed under the [MIT License](LICENSE), and code samples are licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+
+---
+
+Copyright 2019 MNF (illvart). All Rights Reserved.

@@ -1,3 +1,12 @@
+/*!
+ * Copyright 2019 MNF (illvart). All Rights Reserved.
+ *
+ * Creative Commons Attribution 4.0 International License
+ * https://creativecommons.org/licenses/by/4.0/
+ *
+ * GitHub: https://github.com/illvart
+ */
+
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 if (workbox) {
   console.log("Yay! Workbox is loaded \uD83C\uDF89");

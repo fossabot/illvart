@@ -1,9 +1,18 @@
+/*!
+ * Copyright 2019 MNF (illvart). All Rights Reserved.
+ *
+ * Creative Commons Attribution 4.0 International License
+ * https://creativecommons.org/licenses/by/4.0/
+ *
+ * GitHub: https://github.com/illvart
+ */
+
 const eslint = require("gulp-eslint");
 const stylelint = require("gulp-stylelint");
 
 module.exports = ({ reports, gulp }) => {
 
-  // lint javascript
+  // linting javascript
   gulp.task("lint:js", () =>
     gulp
       .src("./src/**/*.js")
@@ -12,12 +21,13 @@ module.exports = ({ reports, gulp }) => {
       .pipe(eslint.failAfterError())
   );
 
-  // lint css/scss
+  // linting css/scss
   gulp.task("lint:scss", () =>
     gulp.src(["./src/assets/scss/**/*.scss"]).pipe(
       stylelint({
         failAfterError: true,
-        reportOutputDir: `${reports}/lint/`, // reports linting
+        // reports linting
+        reportOutputDir: `${reports}/lint/`,
         reporters: [
           {
             formatter: "verbose",
@@ -25,6 +35,7 @@ module.exports = ({ reports, gulp }) => {
           },
           {
             formatter: "json",
+            // check our reports
             save: "stylelint-report.json"
           }
         ],

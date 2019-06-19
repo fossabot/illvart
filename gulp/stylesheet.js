@@ -1,3 +1,12 @@
+/*!
+ * Copyright 2019 MNF (illvart). All Rights Reserved.
+ *
+ * Creative Commons Attribution 4.0 International License
+ * https://creativecommons.org/licenses/by/4.0/
+ *
+ * GitHub: https://github.com/illvart
+ */
+
 const sass = require("gulp-sass");
 const sassGlob = require("gulp-sass-glob");
 const cssbeautify = require("gulp-cssbeautify");
@@ -19,11 +28,14 @@ module.exports = ({ data, browserSync, reload, generateId, gulp, debug, rename, 
     }
   };
 
+  // postcss for development mode
   const postcssDev = [
     presetEnv({
-      autoprefixer: false // disable prefix on development mode
+      // disable prefix on development mode
+      autoprefixer: false
     })
   ];
+  // postcss for prodcution mode
   const postcssProd = [
     mqpacker,
     presetEnv({ browsers: "last 4 versions" }),
@@ -33,10 +45,11 @@ module.exports = ({ data, browserSync, reload, generateId, gulp, debug, rename, 
       }
     }),
     discardComments({
-      removeAll: true // force remove all comments on production mode
+      // force remove all comments on production mode (not map)
+      removeAll: true
     })
   ];
-
+  // postcss -> cssnano and discardComments
   const postcssNano = [
     cssnano({
       discardComments: {
@@ -44,7 +57,8 @@ module.exports = ({ data, browserSync, reload, generateId, gulp, debug, rename, 
       }
     }),
     discardComments({
-      removeAll: true // force remove all comments on production mode
+      // force remove all comments on production mode (not map)
+      removeAll: true
     })
   ];
 
