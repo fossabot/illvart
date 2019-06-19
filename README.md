@@ -49,7 +49,8 @@ yarn local
 Give a ⭐️ this repository if this project helped you!
 
 ## 📝 License
-Except as otherwise noted, the content licensed under the [MIT License](LICENSE), and code samples are licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+Except as otherwise noted, the content licensed under the [MIT License](LICENSE),<br> 
+and code samples are licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
 ---
 
