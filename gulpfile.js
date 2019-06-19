@@ -23,7 +23,9 @@ const output = `${cfg.settings.output}`;
 const reports = `${cfg.settings.reports}`;
 const data = JSON.parse(fs.readFileSync("./src/data/metadata.json"));
 
+// browserSync
 const browserSync = require("browser-sync").create();
+// browserSync reload
 const reload = cb => {
   browserSync.reload();
   cb();
@@ -51,7 +53,7 @@ loader("./gulp/", {
   sourcemaps
 });
 
-// browserSync
+// server (browserSync)
 const server = cb => {
   browserSync.init({
     server: {
@@ -63,6 +65,7 @@ const server = cb => {
     open: false,
     online: true,
     logLevel: "warn",
+    // your short name
     logPrefix: `${data.short_title}`,
     logConnections: false
   });

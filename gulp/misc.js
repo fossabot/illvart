@@ -37,8 +37,9 @@ module.exports = ({ output, gulp, debug }) => {
       .pipe(gulp.dest(output))
   );
 
+  // avoid copying private files
+  const xml_json_Input = ["./src/site.webmanifest"];
   // minify xml, json
-  const xml_json_Input = ["./src/site.webmanifest"]; // avoid copying private files
   gulp.task("minify", () =>
     gulp
       .src(xml_json_Input)

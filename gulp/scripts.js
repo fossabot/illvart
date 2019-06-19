@@ -25,11 +25,14 @@ module.exports = ({ output, browserSync, reload, fs, generateId, gulp, debug, re
   let sw = `${output}/sw.js`;
 
   // javascript development mode
+  // include map
   gulp.task("js:dev", () =>
     gulp
       .src(paths.input.app)
       .pipe(sourcemaps.init({ largeFile: true }))
       .pipe(prettier())
+      // dynamic js name
+      // see template.js
       .pipe(rename(`app.${generateId}.js`))
       .pipe(sourcemaps.write("."))
       .pipe(debug({ title: "JavaScript compiled development‍:" }))
@@ -38,10 +41,12 @@ module.exports = ({ output, browserSync, reload, fs, generateId, gulp, debug, re
   );
 
   // javascript production mode
+  // always include map on production for faster debugging
   gulp.task("js:prod", () =>
     gulp
       .src(paths.input.app)
       .pipe(sourcemaps.init({ largeFile: true }))
+      // minify js with babelMinify
       .pipe(
         babelMinify({
           mangle: {
@@ -50,6 +55,8 @@ module.exports = ({ output, browserSync, reload, fs, generateId, gulp, debug, re
           }
         })
       )
+      // dynamic js name
+      // see template.js
       .pipe(rename(`app.${generateId}.min.js`))
       .pipe(sourcemaps.write("."))
       .pipe(debug({ title: "JavaScript compiled production:" }))
@@ -81,7 +88,8 @@ module.exports = ({ output, browserSync, reload, fs, generateId, gulp, debug, re
         console.warn("Service worker generation failed 😵:", err);
       })
   );
-  // minify workbox with babelMinify, just for development mode
+  // minify workbox with babelMinify
+  // just for development mode
   gulp.task("workbox:minify", () =>
     gulp
       .src(sw, { allowEmpty: true })
@@ -109,6 +117,7 @@ module.exports = ({ output, browserSync, reload, fs, generateId, gulp, debug, re
 
   // watch javascript development mode
   gulp.task("watch:js", () => {
+    // first run js:dev then workbox, reload
     gulp.watch(paths.input.js, gulp.series("js:dev", "workbox", reload));
   });
 

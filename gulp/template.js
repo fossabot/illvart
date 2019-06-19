@@ -14,6 +14,7 @@ const { pd } = require("pretty-data");
 
 module.exports = ({ cfg, output, data, browserSync, reload, generateId, gulp, debug, inject }) => {
 
+  // nunjucks manageEnv
   const manageEnvironment = plugin => {
     // global
     plugin.addGlobal("mode", process.env.NODE_ENV);
@@ -30,6 +31,7 @@ module.exports = ({ cfg, output, data, browserSync, reload, generateId, gulp, de
     plugin.addFilter("toEncodeURI", str => encodeURI(str));
 
     // extension
+    // minify Json
     function minifyJsonExtension() {
       this.tags = ["minifyjson"];
       this.parse = (parser, nodes, lexer) => {
@@ -54,8 +56,10 @@ module.exports = ({ cfg, output, data, browserSync, reload, generateId, gulp, de
 
   const paths = {
     src: {
-      templates: "./src/templates/**/*.+(njk|html)",
-      pages: "./src/templates/pages/**/*.+(njk|html)"
+      // watch css path (only filename .njk)
+      templates: "./src/templates/**/*.+(njk)",
+      // src path (only filename .njk)
+      pages: "./src/templates/pages/**/*.+(njk)"
     }
   };
 
@@ -76,7 +80,7 @@ module.exports = ({ cfg, output, data, browserSync, reload, generateId, gulp, de
           },
           manageEnv: manageEnvironment,
           data: {
-            // store string
+            // store string from metadata.json
             metadata: data,
             // dynamic css name
             css_name_dev: `style.${generateId}.css`,
@@ -100,6 +104,7 @@ module.exports = ({ cfg, output, data, browserSync, reload, generateId, gulp, de
       })
       .pipe(
         sitemap({
+          // get URL from metadata.json
           siteUrl: `${data.url}`
         })
       )
@@ -122,6 +127,7 @@ module.exports = ({ cfg, output, data, browserSync, reload, generateId, gulp, de
 
   // watch nunjucks development mode
   gulp.task("watch:nunjucks", () => {
+    // first run nunjucks:render then sitemap, reload
     gulp.watch(paths.src.templates, gulp.series("nunjucks:render", "sitemap", reload));
   });
 
