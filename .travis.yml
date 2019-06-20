@@ -26,4 +26,4 @@ script:
   - yarn build # build source
 
 after_success:
-  - ./node_modules/.bin/codecov
+  - codecov -f coverage/coverage-final.json # codecov.io
