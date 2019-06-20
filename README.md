@@ -9,9 +9,9 @@ My personal website running on <strong>Node.js</strong> ⚡️
   <a href="https://travis-ci.com/illvart/illvart" title="Travis CI">
     <img alt="Build Status" src="https://travis-ci.com/illvart/illvart.svg?branch=master" />
   </a>
-  <!--<a href="https://coveralls.io/github/illvart/illvart?branch=master" title="Coveralls">
-    <img alt="Coverage Status" src="https://coveralls.io/repos/github/illvart/illvart/badge.svg?branch=master" />
-  </a>-->
+  <a href="https://codecov.io/github/illvart/illvart?branch=master" title="Codecov">
+    <img alt="Coverage Status" src="https://codecov.io/github/illvart/illvart/coverage.svg?branch=master" />
+  </a>
   <a href="https://snyk.io//test/github/illvart/illvart?targetFile=package.json" title="Snyk">
     <img alt="Known Vulnerabilities" src="https://snyk.io//test/github/illvart/illvart/badge.svg?targetFile=package.json" />
   </a>

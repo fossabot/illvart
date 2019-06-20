@@ -1,6 +1,7 @@
 language: node_js
 node_js:
   - "11"
+
 sudo: false
 
 branches:
@@ -18,7 +19,9 @@ cache:
 
 install:
   - yarn
+  - yarn global add codecov
 
 script:
   - yarn lint # linting javascript and scss
   - yarn build # build source
+  - codecov # codecov.io
