@@ -9,18 +9,18 @@ My personal website running on <strong>Node.js</strong> ⚡️
   <a href="https://dev.azure.com/illvart/illvart/_build?definitionId=1" title="Azure DevOps">
     <img alt="Build Status" src="https://dev.azure.com/illvart/illvart/_apis/build/status/illvart.illvart?branchName=master" />
   </a>
-  <a href="https://travis-ci.com/illvart/illvart" title="Travis CI">
+  <!--<a href="https://travis-ci.com/illvart/illvart" title="Travis CI">
     <img alt="Build Status" src="https://travis-ci.com/illvart/illvart.svg?branch=master" />
-  </a>
+  </a>-->
   <!--<a href="https://coveralls.io/github/illvart/illvart?branch=master" title="Coveralls">
     <img alt="Coverage Status" src="https://coveralls.io/repos/github/illvart/illvart/badge.svg?branch=master" />
   </a>-->
   <a href="https://snyk.io//test/github/illvart/illvart?targetFile=package.json" title="Snyk">
     <img alt="Known Vulnerabilities" src="https://snyk.io//test/github/illvart/illvart/badge.svg?targetFile=package.json" />
   </a>
-  <a href="https://david-dm.org/illvart/illvart" title="Watch Dependency">
+  <!--<a href="https://david-dm.org/illvart/illvart" title="Watch Dependency">
     <img alt="Dependency Status" src="https://david-dm.org/illvart/illvart/status.svg" />
-  </a>
+  </a>-->
   <a href="https://david-dm.org/illvart/illvart?type=dev" title="Watch devDependency">
     <img alt="devDependency Status" src="https://david-dm.org/illvart/illvart/dev-status.svg" />
   </a>
