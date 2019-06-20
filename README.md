@@ -6,12 +6,9 @@ My personal website running on <strong>Node.js</strong> ⚡️
   <a href="https://deepscan.io/dashboard#view=project&tid=3680&pid=6009&bid=47892" title="DeepScan">
     <img alt="DeepScan grade" src="https://deepscan.io/api/teams/3680/projects/6009/branches/47892/badge/grade.svg" />
   </a>
-  <a href="https://dev.azure.com/illvart/illvart/_build?definitionId=1" title="Azure DevOps">
-    <img alt="Build Status" src="https://dev.azure.com/illvart/illvart/_apis/build/status/illvart.illvart?branchName=master" />
-  </a>
-  <!--<a href="https://travis-ci.com/illvart/illvart" title="Travis CI">
+  <a href="https://travis-ci.com/illvart/illvart" title="Travis CI">
     <img alt="Build Status" src="https://travis-ci.com/illvart/illvart.svg?branch=master" />
-  </a>-->
+  </a>
   <!--<a href="https://coveralls.io/github/illvart/illvart?branch=master" title="Coveralls">
     <img alt="Coverage Status" src="https://coveralls.io/repos/github/illvart/illvart/badge.svg?branch=master" />
   </a>-->
