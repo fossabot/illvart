@@ -3,8 +3,11 @@
 My personal website running on <strong>Node.js</strong> ⚡️
 </p>
 <p align="center">
-  <a href="https://david-dm.org/illvart/illvart?type=dev" title="Dependency status">
-    <img alt="David" src="https://david-dm.org/illvart/illvart.svg" />
+  <a href="https://david-dm.org/illvart/illvart" title="Watch Dependency">
+    <img alt="Dependency Status" src="https://david-dm.org/illvart/illvart.svg" />
+  </a>
+  <a href="https://david-dm.org/illvart/illvart?type=dev" title="Watch devDependency">
+    <img alt="devDependency Status" src="https://david-dm.org/illvart/illvart/dev-status.svg" />
   </a>
   <a href="https://deepscan.io/dashboard#view=project&tid=3680&pid=6009&bid=47892" title="DeepScan">
     <img alt="DeepScan grade" src="https://deepscan.io/api/teams/3680/projects/6009/branches/47892/badge/grade.svg" />
