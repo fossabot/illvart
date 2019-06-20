@@ -9,6 +9,7 @@ My personal website running on <strong>Node.js</strong> ⚡️
   <a href="https://travis-ci.com/illvart/illvart" title="Travis CI">
     <img alt="Build Status" src="https://travis-ci.com/illvart/illvart.svg?branch=master" />
   </a>
+<a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fillvart%2Fillvart?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fillvart%2Fillvart.svg?type=shield"/></a>
   <a href="https://codecov.io/github/illvart/illvart?branch=master" title="Codecov">
     <img alt="Coverage Status" src="https://codecov.io/github/illvart/illvart/coverage.svg?branch=master" />
   </a>
@@ -64,3 +65,6 @@ and code samples are licensed under the [Apache License 2.0](https://www.apache.
 ---
 
 Copyright © 2019 [MNF (illvart)](https://github.com/illvart). All Rights Reserved.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fillvart%2Fillvart.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fillvart%2Fillvart?ref=badge_large)
