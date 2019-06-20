@@ -4,7 +4,7 @@ My personal website running on <strong>Node.js</strong> ⚡️
 </p>
 <p align="center">
   <a href="https://david-dm.org/illvart/illvart" title="Watch Dependency">
-    <img alt="Dependency Status" src="https://david-dm.org/illvart/illvart.svg" />
+    <img alt="Dependency Status" src="https://david-dm.org/illvart/illvart/status.svg" />
   </a>
   <a href="https://david-dm.org/illvart/illvart?type=dev" title="Watch devDependency">
     <img alt="devDependency Status" src="https://david-dm.org/illvart/illvart/dev-status.svg" />
