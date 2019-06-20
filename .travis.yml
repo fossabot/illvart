@@ -26,4 +26,4 @@ script:
   - yarn build # build source
 
 after_success:
-  - codecov -f .reports/*.json # codecov.io
+  - codecov -f .reports/**/*.json # codecov.io
