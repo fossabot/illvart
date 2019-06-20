@@ -24,4 +24,6 @@ install:
 script:
   - yarn lint # linting javascript and scss
   - yarn build # build source
-  - codecov # codecov.io
+
+after_success:
+  - ./node_modules/.bin/codecov
