@@ -1,38 +1,19 @@
-<<<<<<< HEAD
-=======
-# Node.js
-# Build a general Node.js project with npm.
-# Add steps that analyze code, save build artifacts, deploy, and more:
->>>>>>> f2126d3eab4796134cfeffc4f580b25b787dcb2d
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
 - master
 
 pool:
-<<<<<<< HEAD
   vmImage: "ubuntu-latest"
-=======
-  vmImage: 'ubuntu-latest'
->>>>>>> f2126d3eab4796134cfeffc4f580b25b787dcb2d
 
 steps:
 - task: NodeTool@0
   inputs:
-<<<<<<< HEAD
     versionSpec: "11.x"
   displayName: "Install Node.js"
-=======
-    versionSpec: '11.x'
-  displayName: 'Install Node.js'
->>>>>>> f2126d3eab4796134cfeffc4f580b25b787dcb2d
 
 - script: |
     yarn install
     yarn lint
     yarn build
-<<<<<<< HEAD
   displayName: "Run commands"
-=======
-  displayName: 'yarn install, lint, build'
->>>>>>> f2126d3eab4796134cfeffc4f580b25b787dcb2d
